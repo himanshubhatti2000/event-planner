@@ -2,6 +2,7 @@ import { Box, Rating, Typography } from "@mui/material";
 import Image from "next/image";
 import { PiStar, PiStarFill } from "react-icons/pi";
 
+import OnViewAnimation from "@/components/common/on-view-animation";
 import {
 	CardContent,
 	CardImage,
@@ -29,29 +30,31 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 }) => {
 	return (
 		<CardWrapper>
-			<CardContent>
-				<Box sx={{ marginRight: 2 }}>
-					<CardImage>
-						<Image
-							src={imageSrc}
-							alt={imageAlt}
-							layout="fill"
-							objectFit="cover"
+			<OnViewAnimation>
+				<CardContent>
+					<Box sx={{ marginRight: 2 }}>
+						<CardImage>
+							<Image
+								src={imageSrc}
+								alt={imageAlt}
+								layout="fill"
+								objectFit="cover"
+							/>
+						</CardImage>
+					</Box>
+					<div>
+						<Name variant="h6">{name}</Name>
+						<Rating
+							icon={<StarFill />}
+							emptyIcon={<Star />}
+							name="read-only"
+							value={rating}
+							readOnly
 						/>
-					</CardImage>
-				</Box>
-				<div>
-					<Name variant="h6">{name}</Name>
-					<Rating
-						icon={<StarFill />}
-						emptyIcon={<Star />}
-						name="read-only"
-						value={rating}
-						readOnly
-					/>
-				</div>
-			</CardContent>
-			<ReviewText variant="body1">{text}</ReviewText>
+					</div>
+				</CardContent>
+				<ReviewText variant="body1">{text}</ReviewText>
+			</OnViewAnimation>
 		</CardWrapper>
 	);
 };

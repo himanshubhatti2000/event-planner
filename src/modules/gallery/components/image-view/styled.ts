@@ -12,4 +12,10 @@ const ImageContainer = styled("div")({
 	minHeight: 5,
 });
 
-export { ImageContainer };
+const NotFoundWrapper = styled("div")({
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
+	flexDirection: "column",
+});
+export { ImageContainer, NotFoundWrapper };

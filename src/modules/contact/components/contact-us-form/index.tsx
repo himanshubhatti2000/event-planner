@@ -1,19 +1,17 @@
 import { CONTACT_INFO } from "@/config/contact";
-import { Box, Grid } from "@mui/material";
-// src/components/ContactUsForm/index.tsx
-import type React from "react";
+import { Box, Grid2, Skeleton } from "@mui/material";
+import React, { Suspense } from "react";
 import ContactCard from "../contact-card";
 import { FormWrapper, MapBox } from "./styled";
-import MapComponent from "./Map";
-// import Map from "./Map";
+const LazyMapComponent = React.lazy(() => import("./Map"));
 
 const ContactUsForm: React.FC = () => {
 	return (
 		<FormWrapper>
-			<Grid container spacing={0.5}>
-				<Grid item xs={12} md={6}>
-					{CONTACT_INFO.map((info, index) => (
-						<Box key={index} mb={2}>
+			<Grid2 container spacing={0.5}>
+				<Grid2 size={{ xs: 12, md: 6 }}>
+					{CONTACT_INFO.map((info) => (
+						<Box key={info.title} mb={2}>
 							<ContactCard
 								title={info.title}
 								value={info.value}
@@ -22,13 +20,15 @@ const ContactUsForm: React.FC = () => {
 							/>
 						</Box>
 					))}
-				</Grid>
-				<Grid item xs={12} md={6}>
+				</Grid2>
+				<Grid2 size={{ xs: 12, md: 6 }}>
 					<MapBox>
-					 <MapComponent/>
+						<Suspense fallback={<Skeleton width="100%" height={400} />}>
+							<LazyMapComponent />
+						</Suspense>
 					</MapBox>
-				</Grid>
-			</Grid>
+				</Grid2>
+			</Grid2>
 		</FormWrapper>
 	);
 };

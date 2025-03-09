@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import React from "react";
 import type { Review } from "../../@types";
 import ReviewCard from "../review-card";
@@ -8,9 +8,9 @@ interface ReviewListProps {
 }
 const ReviewList = ({ reviews }: ReviewListProps) => {
 	return (
-		<Grid container spacing={0.5}>
-			{reviews?.map(({ imageAlt, imageSrc, rating, text, name }, index) => (
-				<Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+		<Grid2 container spacing={0.5}>
+			{reviews?.map(({ imageAlt, imageSrc, rating, text, name }) => (
+				<Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={name}>
 					<ReviewCard
 						imageSrc={imageSrc}
 						imageAlt={imageAlt}
@@ -18,9 +18,9 @@ const ReviewList = ({ reviews }: ReviewListProps) => {
 						rating={rating}
 						text={text}
 					/>
-				</Grid>
+				</Grid2>
 			))}
-		</Grid>
+		</Grid2>
 	);
 };
 

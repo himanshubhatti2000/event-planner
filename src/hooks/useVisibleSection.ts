@@ -10,7 +10,7 @@ const useActiveSection: UseActiveSectionHook = (sectionIds, offset = 0) => {
 			let closestSection = "";
 			let minDistance = Number.POSITIVE_INFINITY;
 
-			sectionIds.forEach((id) => {
+			for (const id of sectionIds) {
 				const section = document.getElementById(id);
 				if (section) {
 					const rect = section.getBoundingClientRect();
@@ -26,7 +26,7 @@ const useActiveSection: UseActiveSectionHook = (sectionIds, offset = 0) => {
 						closestSection = id;
 					}
 				}
-			});
+			}
 
 			setActiveSection(closestSection || "");
 		};

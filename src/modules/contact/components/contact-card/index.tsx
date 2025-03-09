@@ -1,3 +1,4 @@
+import OnViewAnimation from "@/components/common/on-view-animation";
 // src/components/ContactCard/index.tsx
 import { Box, Typography } from "@mui/material";
 import type { IconType } from "react-icons";
@@ -18,15 +19,17 @@ const ContactCardBase: React.FC<ContactCardProps> = ({
 	icon: Icon,
 }) => {
 	return (
-		<CardWrapper>
-			<CardIcon>
-				<Icon />
-			</CardIcon>
-			<Box>
-				<Typography variant="h6">{title}</Typography>
-				<Typography variant="body1">{value}</Typography>
-			</Box>
-		</CardWrapper>
+		<OnViewAnimation>
+			<CardWrapper>
+				<CardIcon>
+					<Icon />
+				</CardIcon>
+				<Box>
+					<Typography variant="h6">{title}</Typography>
+					<Typography variant="body1">{value}</Typography>
+				</Box>
+			</CardWrapper>
+		</OnViewAnimation>
 	);
 };
 

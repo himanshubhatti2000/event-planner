@@ -12,10 +12,9 @@ import ContactUsForm from "@/modules/contact/components/contact-us-form";
 import EventList from "@/modules/events/components/event-list";
 import { PricingList } from "@/modules/pricing";
 import PricingContainer from "@/modules/pricing/components/pricing-container";
-import Reviews from "@/modules/reviews";
 import ServiceList from "@/modules/services/components/service-list";
 
-const { SERVICES, EVENTS, REVIEWS, CONTACT_US } = SECTION_CONSTANTS;
+const { SERVICES, EVENTS, CONTACT_US } = SECTION_CONSTANTS;
 export default function Home() {
 	return (
 		<>
@@ -31,10 +30,6 @@ export default function Home() {
 				<SectionHeader>{EVENTS.TITLE}</SectionHeader>
 				<EventList />
 			</CustomWrapper>
-			<CustomWrapper isPaddingY variant="secondary" id={REVIEWS.ID}>
-				<SectionHeader>{REVIEWS.TITLE}</SectionHeader>
-				<Reviews />
-			</CustomWrapper>
 			<PricingContainer>
 				<CustomWrapper isPaddingY>
 					<PricingList pricingData={PRICING_DATA} />
@@ -44,15 +39,6 @@ export default function Home() {
 				<SectionHeader>{CONTACT_US.TITLE}</SectionHeader>
 				<ContactUsForm />
 			</CustomWrapper>
-
-			<FooterContainer>
-				<Footer
-					brand={FOOTER_CONFIG.brand}
-					links={FOOTER_CONFIG.links}
-					copyright={FOOTER_CONFIG.copyright}
-					socialMediaLinks={FOOTER_CONFIG.socialMediaLinks}
-				/>
-			</FooterContainer>
 		</>
 	);
 }

@@ -1,8 +1,8 @@
 "use client";
-import { NAV_LINKS, SECTION_IDS } from "@/constants/nav";
+import { NAV_LINKS, SECTION_IDS } from "@/constants";
 import { Sidebar } from "@/modules/side-bar";
-import { StyledLink } from "@/styled";
-import { Typography, styled } from "@mui/material";
+import { NavLink, StyledLink } from "@/styled";
+import { styled } from "@mui/material";
 import React from "react";
 import useActiveSection from "../../hooks/useVisibleSection";
 import Logo from "../common/logo";
@@ -21,7 +21,7 @@ const StyledHeader = styled("header")(({ theme }) => ({
 	background: "white",
 	padding: 2,
 	boxShadow: theme.shadows[6],
-    
+
 	[theme.breakpoints.down("md")]: {
 		flexDirection: "row-reverse",
 		justifyContent: "space-between",
@@ -51,18 +51,30 @@ const SideContainer = styled("div")(({ theme }) => ({
 	},
 }));
 
+const LogoContainer = styled("div")(({ theme }) => ({
+	[theme.breakpoints.down("md")]: {
+		marginRight: theme.spacing(1.8),
+	},
+}));
+
 const Nav = () => {
 	const activeSection = useActiveSection(SECTION_IDS);
 
 	return (
 		<>
 			<StyledHeader>
-				<Logo />
+				<LogoContainer>
+					<Logo />
+				</LogoContainer>
 				<StyledNav>
 					{NAV_LINKS.map(({ link, title }) => (
-						<StyledLink key={link} href={link} isActive={link === `/#${activeSection}`}>
+						<NavLink
+							key={link}
+							href={link}
+							isActive={link === `/#${activeSection}`}
+						>
 							{title}
-						</StyledLink>
+						</NavLink>
 					))}
 				</StyledNav>
 			</StyledHeader>

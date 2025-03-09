@@ -1,5 +1,6 @@
 import type { FooterConfig } from "@/@types/footer";
-import { Link, Tooltip, Typography } from "@mui/material";
+import { StyledLink } from "@/styled";
+import { Tooltip, Typography } from "@mui/material";
 import type React from "react";
 import Logo from "../logo";
 import {
@@ -21,10 +22,10 @@ const Footer: React.FC<FooterConfig> = ({
 			<FlexContainer>
 				<Logo />
 				<LinksContainer>
-					{links.map((link, index) => (
-						<Link href={link.href} key={index} underline="hover">
+					{links.map((link) => (
+						<StyledLink href={link.href} key={link.text}>
 							{link.text}
-						</Link>
+						</StyledLink>
 					))}
 				</LinksContainer>
 			</FlexContainer>
@@ -33,15 +34,15 @@ const Footer: React.FC<FooterConfig> = ({
 			<BottomContainer>
 				<Typography variant="body2">
 					&copy; {copyright.year}
-					<Link href={copyright.href}>{copyright.text}</Link>
+					<StyledLink href={copyright.href}>{copyright.text}</StyledLink>
 				</Typography>
 				<SocialMediaLinkContainer>
 					{socialMediaLinks.map(({ href, title, icon: Icon }) => (
-						<Link href={href} key={title} underline="hover">
+						<StyledLink href={href} key={title} target="_blank">
 							<Tooltip title={title}>
 								<Icon />
 							</Tooltip>
-						</Link>
+						</StyledLink>
 					))}
 				</SocialMediaLinkContainer>
 			</BottomContainer>

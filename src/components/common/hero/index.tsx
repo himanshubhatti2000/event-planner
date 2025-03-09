@@ -1,3 +1,4 @@
+import { StyledLink } from "@/styled";
 import React from "react";
 import CustomWrapper from "../custom-wrapper";
 import {
@@ -9,29 +10,22 @@ import {
 
 interface HeroProps {
 	headline: string;
-	subheadline: string;
 	image?: string;
 	buttonLabel: string;
 	buttonUrl: string;
-	scrollAnchorId?: string;
 }
 
-const Hero = ({
-	headline,
-	subheadline,
-	image,
-	buttonLabel,
-	buttonUrl,
-	scrollAnchorId,
-}: HeroProps) => {
+const Hero = ({ headline, image, buttonLabel, buttonUrl }: HeroProps) => {
 	return (
 		<HeroContainer imageUrl={image}>
 			<CustomWrapper>
 				<TextSection>
 					<TextTypography variant="h2">{headline}</TextTypography>
-					<StyledButton size="large" variant="outlined">
-						{buttonLabel}
-					</StyledButton>
+					<StyledLink href={buttonUrl}>
+						<StyledButton size="large" variant="outlined">
+							{buttonLabel}
+						</StyledButton>
+					</StyledLink>
 				</TextSection>
 			</CustomWrapper>
 		</HeroContainer>

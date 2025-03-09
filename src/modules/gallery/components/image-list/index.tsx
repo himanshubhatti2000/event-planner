@@ -1,10 +1,13 @@
-
+"use client";
+import { type ImageObjType, ImageType } from "@/@types";
+import { Skeleton } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Item, StyledMasonry, Wrapper } from "./styled";
 
 interface ImageListProps {
-	images: any;
+	images: ImageObjType;
 	variant?: "normal" | "small";
 	imageToHideId?: string | null;
 }
@@ -13,6 +16,16 @@ export default function ImageList({
 	images,
 	variant = "normal",
 }: ImageListProps) {
+	const [isClientReady, setIsClientReady] = useState(false);
+
+	useEffect(() => {
+		// Ensure it runs only on client-side after styles are ready
+		setIsClientReady(true);
+	}, []);
+
+	if (!isClientReady)
+		return <Skeleton variant="rectangular" width="100%" height={600} />;
+
 	return (
 		<Wrapper variant={variant}>
 			<StyledMasonry
@@ -21,7 +34,9 @@ export default function ImageList({
 				spacing={0.5}
 			>
 				{Object.values(images).map((image) => {
+					console.log({ image });
 					const { url, id } = image;
+
 					return (
 						imageToHideId !== id && (
 							<Link key={url} href={`/gallery/${id}`}>

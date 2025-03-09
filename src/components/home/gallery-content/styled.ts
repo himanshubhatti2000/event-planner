@@ -1,6 +1,6 @@
-'use client'
+"use client";
 import { Typography, styled } from "@mui/material";
-import Grid from '@mui/material/Grid2';
+import Grid from "@mui/material/Grid2";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
 	padding: theme.spacing(18, 0),

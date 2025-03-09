@@ -3,8 +3,7 @@ import SectionHeader from "@/components/common/section-header";
 import { ANIMATION_TEXT_CONFIG } from "@/config/animation";
 import { images } from "@/config/gallery";
 import { ImageList } from "@/modules/gallery";
-import Grid from '@mui/material/Grid2';
-
+import Grid from "@mui/material/Grid2";
 import React from "react";
 import { Para, StyledGrid } from "./styled";
 
@@ -12,11 +11,11 @@ const { INITIAL, ANIMATE, TRANSITION } = ANIMATION_TEXT_CONFIG;
 const GalleryContent = () => {
 	return (
 		<StyledGrid container spacing={12}>
-			<Grid size={{xs:12,md:6}}>
+			<Grid size={{ xs: 12, md: 6 }}>
 				<ImageList variant="small" images={images} />
 			</Grid>
 
-			<Grid size={{xs:12,md:6}}>
+			<Grid size={{ xs: 12, md: 6 }}>
 				<SectionHeader>Lorem Ipsum</SectionHeader>
 				<OnViewAnimation
 					initial={INITIAL}

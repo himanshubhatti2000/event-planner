@@ -18,7 +18,8 @@ const Path = (props: React.ComponentProps<typeof motion.path>) => (
 
 export const MenuToggle: React.FC<MenuToggleProps> = ({ toggle }) => (
 	<StyledButton onClick={toggle}>
-		<svg width="18" height="18" viewBox="0 0 23 23">
+		<svg width="18" height="18" viewBox="0 0 23 23" aria-label="menu">
+			<title>menu</title>
 			<Path
 				variants={{
 					closed: { d: "M 2 2.5 L 20 2.5" },

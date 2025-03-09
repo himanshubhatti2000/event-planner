@@ -1,5 +1,5 @@
 "use client";
-import { NAV_LINKS, SECTION_IDS } from "@/constants/nav";
+import { NAV_LINKS, SECTION_IDS } from "@/constants";
 import useActiveSection from "@/hooks/useVisibleSection";
 import type React from "react";
 import { MenuItem } from "./MenuItem";

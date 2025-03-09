@@ -5,33 +5,33 @@ interface Service {
 }
 
 export const Services: Service[] = [
-	{ id: 1, title: "Balloon Decorations", imageSrc: "/services/balloon.jpg" },
-	{ id: 2, title: "Theme-based Decor", imageSrc: "/services/theme.jpg" },
-	{ id: 3, title: "Table Centrepieces", imageSrc: "/services/table.jpg" },
-	{ id: 4, title: "Backdrops & Arches", imageSrc: "/services/backdrops.jpg" },
+	{ id: 1, title: "Balloon Decorations", imageSrc: "/services/balloon.webp" },
+	{ id: 2, title: "Theme-based Decor", imageSrc: "/services/theme.webp" },
+	{ id: 3, title: "Table Centrepieces", imageSrc: "/services/table.webp" },
+	{ id: 4, title: "Backdrops & Arches", imageSrc: "/services/backdrops.webp" },
 	{
 		id: 5,
 		title: "Artificial Floral Arrangements",
-		imageSrc: "/services/artificial_fa.jpg",
+		imageSrc: "/services/artificial_fa.webp",
 	},
 	{
 		id: 6,
 		title: "Lighting Design",
-		imageSrc: "/services/lighting_design.jpg",
+		imageSrc: "/services/lighting_design.webp",
 	},
 	{
 		id: 7,
 		title: "Table Linens & Chair Covers",
-		imageSrc: "/services/table_chair_covers.jpg",
+		imageSrc: "/services/table_chair_covers.webp",
 	},
 	{
 		id: 8,
 		title: "Custom Signage & Banners",
-		imageSrc: "/services/custom_signage_banners.jpg",
+		imageSrc: "/services/custom_signage_banners.webp",
 	},
 	{
 		id: 9,
 		title: "Props & Set Pieces",
-		imageSrc: "/services/props_set_pieces.jpg",
+		imageSrc: "/services/props_set_pieces.webp",
 	},
 ];

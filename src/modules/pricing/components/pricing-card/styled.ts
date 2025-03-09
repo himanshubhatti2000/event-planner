@@ -1,5 +1,6 @@
 "use client";
 import LightButton from "@/components/common/light-button";
+import { StyledLink } from "@/styled";
 import { Box, Divider, Theme, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { PiCheckCircleDuotone } from "react-icons/pi";
@@ -60,7 +61,7 @@ export const ButtonDividerContainer = styled("div")(({ theme }) => ({
 	marginTop: theme.spacing(4),
 }));
 
-export const StyledButton = styled(LightButton)(({ theme }) => ({
+export const ButtonLink = styled(StyledLink)(({ theme }) => ({
 	flexShrink: 0,
 }));
 

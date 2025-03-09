@@ -1,4 +1,5 @@
 import type { FooterConfig } from "@/@types/footer";
+import { LINKS } from "@/constants";
 import { PiFacebookLogoFill } from "react-icons/pi";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
@@ -7,21 +8,28 @@ export const FOOTER_CONFIG: FooterConfig = {
 		href: "https://yourwebsite.com",
 		src: "https://yourwebsite.com/images/logo.svg",
 		alt: "Your Logo",
-		name: "YourBrand",
+		name: "DreamDecor",
 	},
 	links: [
-		{ href: "#", text: "About" },
-		{ href: "#", text: "Privacy Policy" },
-		{ href: "#", text: "Licensing" },
-		{ href: "#", text: "Contact" },
+		{ href: LINKS.ABOUT_US.link, text: "About" },
+		{ href: LINKS.PRIVACY_POLICY.link, text: "Privacy Policy" },
+		{ href: LINKS.CONTACTS.link, text: "Contact" },
 	],
 	socialMediaLinks: [
-		{ href: "#", icon: PiFacebookLogoFill, title: "facebook link" },
-		{ href: "#", icon: PiInstagramLogoFill, title: "instagram link" },
+		{
+			href: "https://www.facebook.com/",
+			icon: PiFacebookLogoFill,
+			title: "facebook link",
+		},
+		{
+			href: "https://www.instagram.com/",
+			icon: PiInstagramLogoFill,
+			title: "instagram link",
+		},
 	],
 	copyright: {
 		href: "#",
-		text: "YourBrand™",
+		text: "DreamDecor",
 		year: 2024,
 	},
 };

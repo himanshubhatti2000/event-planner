@@ -2,12 +2,12 @@
 import LightButton from "@/components/common/light-button";
 import OnViewAnimation from "@/components/common/on-view-animation";
 import { ANIMATION_TEXT_CONFIG } from "@/config/animation";
-import { Box, Divider, Typography } from "@mui/material";
+import { LINKS } from "@/constants";
 import type { PricingType } from "../../@types";
 import {
 	ButtonDividerContainer,
+	ButtonLink,
 	PriceContainer,
-	StyledButton,
 	StyledDivider,
 	Subtitle,
 	Title,
@@ -34,7 +34,10 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, subtitle }) => {
 			</OnViewAnimation>
 
 			<ButtonDividerContainer>
-				<StyledButton>Contact us</StyledButton>
+				<ButtonLink href={LINKS.CONTACTS.link}>
+					<LightButton>{LINKS.CONTACTS.title}</LightButton>
+				</ButtonLink>
+
 				<StyledDivider />
 			</ButtonDividerContainer>
 		</PriceContainer>
