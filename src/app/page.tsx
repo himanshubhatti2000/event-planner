@@ -1,11 +1,8 @@
 import CustomWrapper from "@/components/common/custom-wrapper";
-import Footer from "@/components/common/footer";
 import Hero from "@/components/common/hero";
 import SectionHeader from "@/components/common/section-header";
-import FooterContainer from "@/components/home/footer-container";
 import GalleryContent from "@/components/home/gallery-content";
 import { heroData } from "@/config";
-import { FOOTER_CONFIG } from "@/config/footer";
 import { PRICING_DATA } from "@/config/pricing";
 import { SECTION_CONSTANTS } from "@/constants/common";
 import ContactUsForm from "@/modules/contact/components/contact-us-form";
@@ -30,15 +27,15 @@ export default function Home() {
 				<SectionHeader>{EVENTS.TITLE}</SectionHeader>
 				<EventList />
 			</CustomWrapper>
+			<CustomWrapper isPaddingY variant="secondary" id={CONTACT_US.ID}>
+				<SectionHeader>{CONTACT_US.TITLE}</SectionHeader>
+				<ContactUsForm />
+			</CustomWrapper>
 			<PricingContainer>
 				<CustomWrapper isPaddingY>
 					<PricingList pricingData={PRICING_DATA} />
 				</CustomWrapper>
 			</PricingContainer>
-			<CustomWrapper isPaddingY id={CONTACT_US.ID}>
-				<SectionHeader>{CONTACT_US.TITLE}</SectionHeader>
-				<ContactUsForm />
-			</CustomWrapper>
 		</>
 	);
 }

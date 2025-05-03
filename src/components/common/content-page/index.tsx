@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { type ReactElement } from "react";
 import CustomWrapper from "../custom-wrapper";
 import { ContentPageWrapper } from "./styled";
 
 interface ContentPageProps {
 	title: string;
-	content: string;
+	content: string | ReactElement;
 }
 
 const ContentPage = ({ title, content }: ContentPageProps) => {
@@ -15,7 +15,11 @@ const ContentPage = ({ title, content }: ContentPageProps) => {
 				<Typography variant="h3" marginBottom={2.5}>
 					{title}
 				</Typography>
-				<Typography variant="body1">{content}</Typography>
+
+				{typeof content === "string" && (
+					<Typography variant="body1">{content}</Typography>
+				)}
+				{typeof content !== "string" && content}
 			</CustomWrapper>
 		</ContentPageWrapper>
 	);

@@ -11,7 +11,7 @@ const ContactUsForm: React.FC = () => {
 			<Grid2 container spacing={0.5}>
 				<Grid2 size={{ xs: 12, md: 6 }}>
 					{CONTACT_INFO.map((info) => (
-						<Box key={info.title} mb={2}>
+						<Box key={info.value} mb={2}>
 							<ContactCard
 								title={info.title}
 								value={info.value}

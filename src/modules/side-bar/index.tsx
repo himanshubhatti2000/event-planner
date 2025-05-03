@@ -40,7 +40,7 @@ export const Sidebar: React.FC = () => {
 			ref={containerRef}
 		>
 			<Background variants={sidebar} />
-			<Navigation onMenuItemClick={toggleOpen} />
+			{isOpen && <Navigation onMenuItemClick={toggleOpen} />}
 			<MenuToggle toggle={() => toggleOpen()} />
 		</StyledNav>
 	);

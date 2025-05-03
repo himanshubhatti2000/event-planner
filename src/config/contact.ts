@@ -3,14 +3,26 @@ import { PiEnvelopeSimple, PiPhone } from "react-icons/pi";
 export const CONTACT_INFO = [
 	{
 		title: "Email",
-		value: "info@example.com",
+		value: "dreamdecor791@gmail.com",
 		icon: PiEnvelopeSimple,
-		href: "mailto: info@example.com",
+		href: "mailto: dreamdecor791@gmail.com",
 	},
 	{
-		title: "Phone Number",
-		value: "+1 (123) 456-7890",
+		title: "Pooja's Phone Number",
+		value: "902-514-1896",
 		icon: PiPhone,
-		href: "tel: +1 (123) 456-7890",
+		href: "tel: 902-514-1896",
+	},
+	{
+		title: "Divya's Phone Number",
+		value: "902-514-0348",
+		icon: PiPhone,
+		href: "tel: 902-514-0348",
+	},
+	{
+		title: "Sahil's Phone Number",
+		value: "902-514-9997",
+		icon: PiPhone,
+		href: "tel: 902-514-9997",
 	},
 ];

@@ -12,6 +12,7 @@ import Nav from "@/components/nav";
 import { FOOTER_CONFIG } from "@/config/footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import type { EmotionCache } from "@emotion/react"; // Add this
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { Roboto } from "next/font/google";
 import { Wrapper } from "./styled";
 
@@ -37,20 +38,22 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={roboto.variable}>
-				<ThemeProvider>
-					<CustomWrapper>
-						<Nav />
-					</CustomWrapper>
-					<Wrapper>{children}</Wrapper>
-					<FooterContainer>
-						<Footer
-							brand={FOOTER_CONFIG.brand}
-							links={FOOTER_CONFIG.links}
-							copyright={FOOTER_CONFIG.copyright}
-							socialMediaLinks={FOOTER_CONFIG.socialMediaLinks}
-						/>
-					</FooterContainer>
-				</ThemeProvider>
+				<AppRouterCacheProvider>
+					<ThemeProvider>
+						<CustomWrapper>
+							<Nav />
+						</CustomWrapper>
+						<Wrapper>{children}</Wrapper>
+						<FooterContainer>
+							<Footer
+								brand={FOOTER_CONFIG.brand}
+								links={FOOTER_CONFIG.links}
+								copyright={FOOTER_CONFIG.copyright}
+								socialMediaLinks={FOOTER_CONFIG.socialMediaLinks}
+							/>
+						</FooterContainer>
+					</ThemeProvider>
+				</AppRouterCacheProvider>
 			</body>
 		</html>
 	);

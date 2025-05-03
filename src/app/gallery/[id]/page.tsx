@@ -8,3 +8,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 };
 
 export default Page;
+
+export async function generateStaticParams() {
+	const ids = Object.keys(images);
+
+	return ids.map((id) => ({ id }));
+}

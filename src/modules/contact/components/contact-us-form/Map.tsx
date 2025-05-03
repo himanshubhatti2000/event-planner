@@ -6,11 +6,11 @@ const MapComponent = () => {
 	return (
 		<PigeonMap
 			height={400}
-			defaultCenter={[40.7128, -74.006]}
+			defaultCenter={[44.3771144, -64.5249775]}
 			defaultZoom={13}
 			mouseEvents={false}
 		>
-			<Marker width={50} anchor={[40.7128, -74.006]} />
+			<Marker width={50} anchor={[44.3771144, -64.5249775]} />
 			<ZoomControl />
 		</PigeonMap>
 	);
