@@ -1,47 +1,53 @@
 import type { ImageObjType } from "@/@types";
 
 const images: ImageObjType = {
-	"1": {
-		id: "1",
+	wedding: {
+		id: "wedding",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/1.webp",
+		url: "/gallery/wedding.webp",
 	},
-	"2": {
-		id: "2",
+	minimal: {
+		id: "minimal",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/2.webp",
+		url: "/gallery/minimal.webp",
 	},
-	"3": {
-		id: "3",
+	decoration: {
+		id: "decoration",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/3.webp",
+		url: "/gallery/decoration.webp",
 	},
-	"4": {
-		id: "4",
+	"kids-party": {
+		id: "kids-party",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/4.webp",
+		url: "/gallery/kids-party.webp",
 	},
-	"5": {
-		id: "5",
+	birthday: {
+		id: "birthday",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/5.webp",
+		url: "/gallery/birthday.webp",
 	},
-	"6": {
-		id: "6",
+	couple: {
+		id: "couple",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/6.webp",
+		url: "/gallery/couple.webp",
 	},
-	"7": {
-		id: "7",
+	event: {
+		id: "event",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/7.webp",
+		url: "/gallery/event.webp",
+	},
+	party: {
+		id: "party",
+		format: "webp",
+		blurDataUrl: "/gallery/blur.webp",
+		url: "/gallery/party.webp",
 	},
 } as const;
 

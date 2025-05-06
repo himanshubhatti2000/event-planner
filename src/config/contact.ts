@@ -8,19 +8,19 @@ export const CONTACT_INFO = [
 		href: "mailto: dreamdecor791@gmail.com",
 	},
 	{
-		title: "Pooja's Phone Number",
+		title: "Pooja Thakur's Phone Number",
 		value: "902-514-1896",
 		icon: PiPhone,
 		href: "tel: 902-514-1896",
 	},
 	{
-		title: "Divya's Phone Number",
+		title: "Divya Jyoti Ahluwalia's Phone Number",
 		value: "902-514-0348",
 		icon: PiPhone,
 		href: "tel: 902-514-0348",
 	},
 	{
-		title: "Sahil's Phone Number",
+		title: "Sahil Manhas's Phone Number",
 		value: "902-514-9997",
 		icon: PiPhone,
 		href: "tel: 902-514-9997",

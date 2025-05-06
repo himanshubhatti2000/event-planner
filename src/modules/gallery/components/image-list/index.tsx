@@ -34,7 +34,6 @@ export default function ImageList({
 				spacing={0.5}
 			>
 				{Object.values(images).map((image) => {
-					console.log({ image });
 					const { url, id } = image;
 
 					return (

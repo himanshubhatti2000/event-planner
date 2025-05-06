@@ -16,7 +16,7 @@ const GalleryContent = () => {
 			</Grid>
 
 			<Grid size={{ xs: 12, md: 6 }}>
-				<SectionHeader>About Us</SectionHeader>
+				<SectionHeader>Gallery</SectionHeader>
 				<OnViewAnimation
 					initial={INITIAL}
 					animate={ANIMATE}

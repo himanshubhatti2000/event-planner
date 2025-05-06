@@ -22,7 +22,7 @@ export const FOOTER_CONFIG: FooterConfig = {
 			title: "facebook link",
 		},
 		{
-			href: "https://www.instagram.com/",
+			href: "https://www.instagram.com/dream.decor05/",
 			icon: PiInstagramLogoFill,
 			title: "instagram link",
 		},
