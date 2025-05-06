@@ -9,6 +9,7 @@ import CustomWrapper from "@/components/common/custom-wrapper";
 import Footer from "@/components/common/footer";
 import FooterContainer from "@/components/home/footer-container";
 import Nav from "@/components/nav";
+import { META_DATA } from "@/config";
 import { FOOTER_CONFIG } from "@/config/footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import type { EmotionCache } from "@emotion/react"; // Add this
@@ -24,24 +25,22 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-	title: "Dream Decor",
-	description:
-		"Transform your event with stunning balloon decorations, themed setups, floral arrangements, and more. From birthdays to bridal showers, we provide the best facilities to make your occasion unforgettable.",
+	title: META_DATA.TITLE,
+	description: META_DATA.DESCRIPTION,
 	openGraph: {
-		title: "Dream Decor",
-		description:
-			"Transform your event with stunning balloon decorations, themed setups, floral arrangements, and more.",
-		url: "https://event-planner-navy-iota.vercel.app/",
-		siteName: "Dream Decor",
+		title: META_DATA.TITLE,
+		description: META_DATA.DESCRIPTION,
+		url: META_DATA.URL,
+		siteName: META_DATA.TITLE,
 		images: [
 			{
-				url: "https://event-planner-navy-iota.vercel.app/hero-bg.webp",
-				width: 1200,
-				height: 630,
-				alt: "Dream Decor Event Decoration",
+				url: META_DATA.IMG_URL,
+				width: 700,
+				height: 462,
+				alt: META_DATA.SUB_HEADLINE,
 			},
 		],
-		type: "website",
+		type: META_DATA.TYPE,
 	},
 };
 

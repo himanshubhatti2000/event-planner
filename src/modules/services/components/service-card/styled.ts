@@ -14,8 +14,8 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
 
 	[`& .${IMAGE_WRAPPER}`]: {
 		position: "relative",
-		height: theme.spacing(14),
-		width: theme.spacing(14),
+		height: theme.spacing(18),
+		width: theme.spacing(18),
 		overflow: "hidden",
 		flexShrink: 0,
 
@@ -30,6 +30,10 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
 				transform: "scale(1.05)",
 				filter: "brightness(100%)",
 			},
+		},
+		[theme.breakpoints.down("lg")]: {
+			height: theme.spacing(14),
+			width: theme.spacing(14),
 		},
 		[theme.breakpoints.down("md")]: {
 			height: theme.spacing(12),

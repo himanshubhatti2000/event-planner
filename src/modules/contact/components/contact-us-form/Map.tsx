@@ -1,18 +1,31 @@
 "use client";
+import { MAP_COORDINATES, getMapUrl } from "@/config/contact";
 import { Marker, Map as PigeonMap, ZoomControl } from "pigeon-maps";
 import React from "react";
 
 const MapComponent = () => {
+	const { LAT, LNG } = MAP_COORDINATES;
+
+	const openInMaps = () => {
+		console.log("hey");
+		const url = getMapUrl(LAT, LNG);
+		window.open(url, "_blank");
+	};
+
 	return (
-		<PigeonMap
-			height={400}
-			defaultCenter={[44.3771144, -64.5249775]}
-			defaultZoom={13}
-			mouseEvents={false}
-		>
-			<Marker width={50} anchor={[44.3771144, -64.5249775]} />
-			<ZoomControl />
-		</PigeonMap>
+		<div onClick={openInMaps} onKeyDown={openInMaps}>
+			<PigeonMap
+				height={400}
+				defaultCenter={[LAT, LNG]}
+				defaultZoom={13}
+				mouseEvents={false}
+				touchEvents={false}
+				zoomSnap={false}
+			>
+				<Marker width={50} anchor={[LAT, LNG]} />
+				<ZoomControl />
+			</PigeonMap>
+		</div>
 	);
 };
 

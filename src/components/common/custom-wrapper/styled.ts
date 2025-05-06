@@ -19,6 +19,6 @@ export const Wrapper = styled("div")<WrapperProps>(
 );
 
 export const Content = styled("div")(({ theme }) => ({
-	maxWidth: 1200,
+	maxWidth: 1400,
 	width: "100%",
 }));
