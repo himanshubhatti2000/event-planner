@@ -20,7 +20,7 @@ export const CONTACT_INFO = [
 		href: "tel: 902-514-0348",
 	},
 	{
-		title: "Sahil Manhas's Phone Number",
+		title: "Sahil's Phone Number",
 		value: "902-514-9997",
 		icon: PiPhone,
 		href: "tel: 902-514-9997",
