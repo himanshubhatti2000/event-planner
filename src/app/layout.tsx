@@ -27,6 +27,22 @@ export const metadata: Metadata = {
 	title: "Dream Decor",
 	description:
 		"Transform your event with stunning balloon decorations, themed setups, floral arrangements, and more. From birthdays to bridal showers, we provide the best facilities to make your occasion unforgettable.",
+	openGraph: {
+		title: "Dream Decor",
+		description:
+			"Transform your event with stunning balloon decorations, themed setups, floral arrangements, and more.",
+		url: "https://event-planner-navy-iota.vercel.app/",
+		siteName: "Dream Decor",
+		images: [
+			{
+				url: "https://event-planner-navy-iota.vercel.app/hero-bg.webp",
+				width: 1200,
+				height: 630,
+				alt: "Dream Decor Event Decoration",
+			},
+		],
+		type: "website",
+	},
 };
 
 export default function RootLayout({

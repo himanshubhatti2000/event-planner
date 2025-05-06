@@ -20,6 +20,10 @@ export const HeroContainer = styled("div")<HeroContainerProps>(
 		padding: theme.spacing(12, 0),
 		backgroundAttachment: "fixed",
 
+		"@supports (-webkit-overflow-scrolling: touch)": {
+			backgroundAttachment: "scroll",
+		},
+
 		"::before": {
 			position: "absolute",
 			top: 0,
