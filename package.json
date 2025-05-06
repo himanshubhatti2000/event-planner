@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "biome check ./src/.",
     "lint:fix": "biome check --fix ./src/."
@@ -22,6 +23,7 @@
     "@mui/styled-engine-sc": "^6.4.3",
     "motion": "^12.4.2",
     "next": "15.1.7",
+    "next-sitemap": "^4.2.3",
     "next-transpile-modules": "^10.0.1",
     "pigeon-maps": "^0.22.1",
     "react": "^19.0.0",

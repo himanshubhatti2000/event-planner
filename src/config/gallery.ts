@@ -31,11 +31,11 @@ const images: ImageObjType = {
 		blurDataUrl: "/gallery/blur.webp",
 		url: "/gallery/birthday.webp",
 	},
-	couple: {
-		id: "couple",
+	"balloon-decoration": {
+		id: "balloon-decoration",
 		format: "webp",
 		blurDataUrl: "/gallery/blur.webp",
-		url: "/gallery/couple.webp",
+		url: "/gallery/balloon-decoration.webp",
 	},
 	event: {
 		id: "event",
