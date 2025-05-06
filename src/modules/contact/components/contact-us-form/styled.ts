@@ -11,3 +11,7 @@ export const MapBox = styled(Box)(({ theme }) => ({
 	borderRadius: theme.shape.borderRadius,
 	boxShadow: theme.shadows[2],
 }));
+
+export const MapContainer = styled("div")({
+	cursor: "pointer",
+});
